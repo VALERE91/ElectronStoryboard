@@ -1,0 +1,71 @@
+<link rel="import" href="file://bower/polymer/polymer.html">
+<link rel="import" href="file://bower/iron-input/iron-input.html">
+
+<dom-module id="picture-frame">
+  <!-- scoped CSS for this element -->
+  <style>
+    div {
+      display: inline-block;
+      background-color: #ccc;
+      border-radius: 8px;
+      padding: 4px;
+    }
+  </style>
+
+  <template>
+    <div>
+      <!-- any children are rendered here -->
+      <content></content>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: "picture-frame",
+    });
+  </script>
+</dom-module>
+
+<dom-module id="name-tag">
+  <template>
+    <div>
+      <!-- bind to the "owner" property -->
+      This is <b>{{owner}}</b>'s configurable-name-tag element.
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: "name-tag",
+      properties: {
+        // declare the owner property
+        owner: {
+          type: String,
+          value: "Daniel"
+        }
+      }
+    });
+  </script>
+</dom-module>
+
+<dom-module id="input-binding">
+  <template>
+    <div>
+      <!-- bind to the "owner" property -->
+      This is your input : <b>{{owner}}</b>
+      <input is="iron-input" bind-value="{{owner}}" placeholder="Your name here...">
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is:"input-binding",
+      properties: {
+        owner: {
+          type: String,
+          value: "Daniel"
+        }
+      }
+    });
+  </script>
+</dom-module>

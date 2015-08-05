@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Hello World! From page 2</title>
+    </head>
+    <body>
+        <h1>Hello World! From Page 2</h1>
+        We are using io.js
+        <script>document.write(process.version)</script>
+        and Electron
+        <script>document.write(process.versions['electron'])</script>.
+        <p id="login"></p>
+        <p id="password"></p>
+        <script>
+            window.$ = window.jQuery = require("jquery/dist/jquery.min.js");
+            $(document).ready(function(){
+                ipc.on("test", function (event, arg) {
+                    console.log(event);
+                    $("#login").text(event.login);
+                    $("#password").text(event.password);
+                });
+            }); 
+        </script>
+    </body>
+</html>

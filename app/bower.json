@@ -1,0 +1,22 @@
+{
+  "name": "TestElectron",
+  "version": "0.0.0",
+  "authors": [
+    "VALERE91 <valereplantevin@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.0.0",
+    "iron-input": "PolymerElements/iron-input#1.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+﻿{
+	"mainWindow":{
+		"main" : true,
+		"view":"index",
+		"controller":"MainWindowController",
+		"events":[
+			{
+				"name":"clickNext",
+				"view":"secondWindow"
+			}
+		]
+	},
+	"secondWindow":{
+		"view":"second",
+		"controller":"SecondWindowController"
+	}
+}
